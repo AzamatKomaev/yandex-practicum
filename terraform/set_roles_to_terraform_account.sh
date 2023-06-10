@@ -1,5 +1,6 @@
 #/usr/bin/zsh
-yc iam service-account create \
-	--name terraform
+yc resource-manager folder add-access-binding $RESOURCE_ID \
+	--role editor \
+	--subject serviceAccount:$SERVICE_ACCOUNT_ID
 
 
