@@ -1,0 +1,8 @@
+#cloud-config
+users:
+  - name: azamat
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - $SSH_PUBLIC_KEY
